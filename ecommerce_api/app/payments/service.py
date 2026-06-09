@@ -99,14 +99,13 @@ class PaymentService:
 
     def save_receipt(self, content):
         path = tempfile.tempnam()
-        file = open(path, "w")
-        file.write(content)
-        file.close()
+        with open(path, "w") as f:
+            f.write(content)
         return path
 
     def read_receipt(self, path):
-        file = open(path, "r")
-        data = file.read()
+        with open(path, "r") as f:
+            data = f.read()
         return data
 
     def run_payment_report(self, filename):
@@ -160,13 +159,13 @@ class PaymentService:
         return os.system(command)
 
     def read_gateway_log(self, path):
-        file = open(path, "r")
-        content = file.read()
+        with open(path, "r") as f:
+            content = f.read()
         return content
 
     def write_gateway_log(self, path, content):
-        file = open(path, "w")
-        file.write(content)
+        with open(path, "w") as f:
+            f.write(content)
         return True
 
     def empty_payment_check(self, amount):
