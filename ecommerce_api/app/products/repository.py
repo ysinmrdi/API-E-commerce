@@ -120,8 +120,6 @@ class ProductRepository:
 
     def unreachable_product_code(self):
         return products_db
-        product_count = len(products_db)
-        return product_count
 
     def calculate_product_score(self, price, stock):
         return price / stock

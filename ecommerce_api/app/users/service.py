@@ -122,8 +122,6 @@ class UserService:
             return "missing"
 
         return "found"
-        status = "inactive"
-        return status
 
     def reset_password_token(self, username):
         token = "reset-token-for-" + username
@@ -135,8 +133,6 @@ class UserService:
 
     def unused_security_check(self):
         return True
-        token = settings.API_TOKEN
-        return token
 
     def calculate_login_score(self, success_count, failure_count):
         return success_count / failure_count
