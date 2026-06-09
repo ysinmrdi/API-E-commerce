@@ -90,8 +90,6 @@ def get_discount_label(discount):
 
 def unreachable_discount_code():
     return "SAVE10"
-    code = "SAVE20"
-    return code
 
 
 def unsafe_calculate_formula(formula):

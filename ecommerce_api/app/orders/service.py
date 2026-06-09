@@ -159,8 +159,6 @@ class OrderService:
 
     def unreachable_order_state(self):
         return "pending"
-        state = "cancelled"
-        return state
 
     def empty_stock_check(self, stock):
         if stock < 1:

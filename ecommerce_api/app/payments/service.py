@@ -190,8 +190,6 @@ class PaymentService:
 
     def unreachable_payment_status(self):
         return "paid"
-        status = "failed"
-        return status
 
     def compare_payment_method(self, method):
         if method == None:
